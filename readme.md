@@ -25,14 +25,13 @@ Create Vue component,provider, model:
   npm run vue:create
 ``` 
 
-- Compile Vue components to recognize new elements in Aplication: 
+- Compile Vue components to recognize new elements in Application: 
 ```javascript
   npm run vue:compile
 ``` 
 
-
-
-
+In your .env file create a variable called VUE_DEVELOP, so Laravel will learn what assets to use,
+check **app.blade.php** located in ***resources/views/layouts***
 
 
 # Laravel PHP Framework
