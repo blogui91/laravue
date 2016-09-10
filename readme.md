@@ -1,6 +1,39 @@
 #Laravue
 
-[Instalation]
+##Instalation
+
+- Install npm and bower dependencies (don't forget vue dependencies in **client** folder
+
+## Basic commands
+
+Run Vue project as **Dev** : 
+```javascript
+  npm run vue
+``` 
+Run Browsersync to watch for changes in Laravel Views and sass stylesheets: 
+```javascript
+  npm run dev
+``` 
+
+Build Vue and Laravel assets : 
+```javascript
+  npm run prod
+``` 
+
+Create Vue component,provider, model: 
+```javascript
+  npm run vue:create
+``` 
+
+- Compile Vue components to recognize new elements in Aplication: 
+```javascript
+  npm run vue:compile
+``` 
+
+
+
+
+
 
 # Laravel PHP Framework
 
