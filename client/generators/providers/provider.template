@@ -1,0 +1,79 @@
+//import endpoints from 'route/to/your/endpoints-file';
+import Vue from 'vue';
+
+export
+default {
+	get() {
+		var {{areas}}_promise = new Promise((resolve, reject) => {
+			Vue.http.get(endpoints.api.{{areas}})
+				.then((success) => {
+					resolve(success);
+				})
+				.catch((err) => {
+					console.log(err);
+					reject(err);
+				});
+		});
+
+		return {{areas}}_promise
+	},
+	delete(id) {
+		var {{areas}}_promise = new Promise((resolve, reject) => {
+			Vue.http.delete(endpoints.api.{{areas}} + "/" + id)
+				.then((success) => {
+					resolve(success);
+				})
+				.catch((err) => {
+					console.log(err);
+					reject(err);
+				});
+		});
+
+		return {{areas}}_promise
+	},
+	find(id) {
+		var {{areas}}_promise = new Promise((resolve, reject) => {
+			Vue.http.get(endpoints.api.{{areas}} + "/" + id)
+				.then((success) => {
+					resolve(success);
+				})
+				.catch((err) => {
+					console.log(err);
+					reject(err);
+				});
+		});
+
+		return {{areas}}_promise
+	},
+	update(item) {
+		var id = item.id;
+		var {{areas}}_promise = new Promise((resolve, reject) => {
+			Vue.http.put(endpoints.api.{{areas}} + "/" + id, item)
+				.then((success) => {
+					resolve(success);
+				})
+				.catch((err) => {
+					console.log(err);
+					reject(err);
+				});
+		});
+
+		return {{areas}}_promise
+	},
+	create(new_item) {
+		console.log(endpoints.api.{{areas}})
+		var {{areas}}_promise = new Promise((resolve, reject) => {
+			Vue.http.post(endpoints.api.{{areas}}, new_item)
+				.then((success) => {
+					resolve(success);
+				})
+				.catch((err) => {
+					console.log(err);
+					reject(err);
+				});
+		});
+
+		return {{areas}}_promise
+	},
+
+}

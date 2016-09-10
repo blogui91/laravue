@@ -1,0 +1,26 @@
+{
+  "name": "Laravue",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Cesar Santana"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "vue"
+  ],
+  "homepage": "",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "materialize": "^0.97.7"
+  }
+}

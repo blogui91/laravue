@@ -1,0 +1,21 @@
+import Model from './Model';
+
+class {{Model}} extends Model {
+
+	constructor(data) {
+		super();
+
+		this.attributes = {{attributes}};
+
+		//Fill your data 
+		this.fill(data);
+
+		this.required_fields_for_create = [];
+		this.required_fields_for_update = [];
+	}
+
+	{{setgetters}}
+}
+
+export
+default {{Model}};

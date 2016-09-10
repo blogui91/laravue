@@ -5,5 +5,39 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Materialize
+@import "bower_components/materialize/sass/materialize.scss";
+@import "components/navigation.scss";
+
+.bold {
+	font-weight: bold;
+}
+
+*[v-cloak]{
+	display: none;
+}
+
+.username{
+	padding: 24px;
+	background-color : #ddd;
+	input[type=text]{
+		max-width: 420px;
+		background-color: white;
+		padding-left:1em;
+		&:focus{
+			box-shadow : 3px 4px 9px #ccc;
+			border-bottom: #ddd;
+		}
+	}
+}
+
+.md-padding{
+	padding: 24px;
+}
+
+
+.instructions{
+	ul{
+		font-size: 20px;
+	}
+}

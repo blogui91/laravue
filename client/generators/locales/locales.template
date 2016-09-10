@@ -1,0 +1,12 @@
+export default {
+	es : {
+		{{component_name}} : {
+
+		}
+	},
+	en : {
+		{{component_name}} : {
+
+		}
+	}
+}

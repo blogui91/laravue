@@ -1,0 +1,35 @@
+<style lang="scss">
+.{{new-element}}{
+  padding: 24px;
+  background : #ccc;
+}
+</style>
+<template>
+	<div class="{{new-element}}">
+      <p class="bold">
+        New component {{new-element}} <br/>{{now}}
+      </p>
+	</div>
+</template>
+<script>
+  export default {
+  	props : {},
+    data() {
+      return{
+        now : new Date()
+      }
+    },
+    ready(){
+   
+    },
+    filters : {
+
+    },
+    methods :{
+     
+    },
+    watch: {
+      
+    }
+  }
+</script>
