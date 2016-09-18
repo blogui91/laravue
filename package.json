@@ -6,7 +6,7 @@
         "vue": "cd client && node generateComponentsPaths.js && node build/dev-server.js",
         "dev": "gulp watch",
         "vue:compile": "cd client && node generateComponentsPaths.js",
-        "vue:create": "cd client\\generators && node index.js"
+        "vue:create": "cd client/generators && node index.js"
     },
     "dependencies": {
         "autoprefixer-loader": "^3.1.0",

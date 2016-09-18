@@ -2,6 +2,8 @@ var fs = require('fs');
 var PATHS = require('./paths');
 var CreateAttributes = require('./models/createAttributes.js');
 var CreateSetGetters = require('./models/createSetGetters.js');
+var beautify = require('js-beautify').js_beautify, fs = require('fs');
+
 
 module.exports = {
 	read: function(rl, model_name, attrs) {
@@ -31,6 +33,9 @@ module.exports = {
 				}
 
 				var name = model_name_capitalized() + ".model.js";
+
+				doc = beautify(doc,{indent_size : 2})
+
 
 				if (!fs.existsSync(dir + "/" + name)) {
 					console.log("creando el archivo " + name)

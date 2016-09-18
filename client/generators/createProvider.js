@@ -1,5 +1,7 @@
 var fs = require('fs');
 var PATHS = require('./paths');
+var beautify = require('js-beautify').js_beautify, fs = require('fs');
+
 
 module.exports = {
 	read: function(rl, provider_name) {
@@ -18,6 +20,8 @@ module.exports = {
 				}
 
 				var name = provider_name_capitalized() + ".provider.js";
+
+				doc = beautify(doc,{indent_size : 2})
 
 				if (!fs.existsSync(dir + "/" + name)) {
 					console.log("creando el archivo " + name)
