@@ -10,8 +10,8 @@ class {{Model}} extends Model {
 		//Fill your data 
 		this.fill(data);
 
-		this.required_fields_for_create = [];
-		this.required_fields_for_update = [];
+		this.rules_for_create = {};
+		this.rules_for_update = {};
 	}
 
 	{{setgetters}}

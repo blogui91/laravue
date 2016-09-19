@@ -41,12 +41,14 @@
       }
     },
     ready(){
+
       var user = new UserModel({
         first_name : 'Cesar A',
         last_name : 'Santana',
         email : 'casc.santana@gmail.com',
         avatar : 'https://s3.amazonaws.com/uifaces/faces/twitter/csantana22/128.jpg'
       });
+
       this.state.users.push(user);
     },
     filters : {

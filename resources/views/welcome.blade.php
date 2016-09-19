@@ -17,14 +17,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col m6 s12">
+                    <div class="col s12">
                         <material-calendar :model.sync="state.today"></material-calendar>  
                         {{-- USE VUE COMPONENT IN WHOLE APP --}}
                         
                     </div>
-                    <div class="col m6 s12">
+                    <div class="col s12">
                         <users></users>
                     </div>
+
+
                 </div>
 
                 @include('partials.instructions')

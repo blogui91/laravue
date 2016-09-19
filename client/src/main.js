@@ -13,7 +13,6 @@ Vue.use(VueResource);
 Vue.prototype.$moment = moment;
 Vue.prototype.$_ = _;
 
-
 //Install out components
 import ComponentsProvider from './Components.provider.js';
 ComponentsProvider.install(Vue);

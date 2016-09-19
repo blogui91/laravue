@@ -1,5 +1,7 @@
 import Model from './Model';
+
 class User extends Model {
+	
 	constructor(user) {
 		super();
 
@@ -12,12 +14,21 @@ class User extends Model {
 			avatar: null
 		};
 
+		console.log(user)
+
 		if (typeof user !== 'undefined') {
 			this.fill(user);
 		}
 
-		this.required_fields_for_create = ['first_name', 'last_name', 'email'];
-		this.required_fields_for_update = ['first_name', 'last_name', 'email', 'notes'];
+
+		console.log(this.attributes)
+
+		this.rules_for_create = {
+			'first_name' : 'required',
+			'last_name':'required',
+			'email' : 'required|email'
+		};
+		this.rules_for_update = {};
 	}
 
 
@@ -28,7 +39,6 @@ class User extends Model {
 	set id(id) {
 		this.attributes.id = id;
 	}
-
 
 	get first_name() {
 		return this.attributes.first_name;
