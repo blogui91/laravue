@@ -11,12 +11,12 @@ class Validator{
 	constructor(){
 
 		this.validator = {
-			types : {
-				required : 'This field is required',
-				email : 'This field should be an email',
-				min : 'You are under the minimum, write a higher value',
-				max : 'You are over the maximum, write a lower value',
-				number : "Value not valid, It must be a number"
+			types: {
+				required: 'This field is required',
+				email: 'This field should be an email',
+				min: 'You are under the minimum, write a higher value',
+				max: 'You are over the maximum, write a lower value',
+				number: "Value not valid, It must be a number"
 			}
 		}
 

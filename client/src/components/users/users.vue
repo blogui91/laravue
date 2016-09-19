@@ -27,6 +27,25 @@
     </ul>
     <button class="btn indigo darken-1" @click="newUser">Create new</button>
 	</div>
+  <div class="white md-padding">
+    <input type="text" placeholder="First name" v-model="user.first_name">
+    <small class="red-text" v-if="user.errors.first_name" v-for="error in user.errors.first_name">
+      - {{error}} <br>
+    </small>
+    <br>
+    <input type="text" v-model="user.last_name" placeholder="last name">
+    <small class="red-text" v-if="user.errors.last_name" v-for="error in user.errors.last_name">
+      - {{error}} <br>
+    </small>
+    <br>
+    <input type="email" v-model="user.email" placeholder="email">
+    <small class="red-text" v-if="user.errors.email" v-for="error in user.errors.email">
+      - {{error}} <br>
+    </small>
+
+
+    <button @click="user.validForCreation()" class="btn green">Validar</button>
+  </div>
 </template>
 <script>
   import state from 'src/stores';
@@ -37,7 +56,8 @@
     data() {
       return{
         now : new Date(),
-        state
+        state,
+        user : new UserModel()
       }
     },
     ready(){
