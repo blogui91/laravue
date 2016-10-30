@@ -1,7 +1,7 @@
 'use strict';
 const HOST = location.origin;
-const API = '/api';
-const URL = HOST + API;
+const PREFIX = '/api';
+const URL = HOST + PREFIX;
 
 var routes = {
 	api: {

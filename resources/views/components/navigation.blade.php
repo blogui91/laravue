@@ -5,10 +5,10 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <a href="#" >
-              <div class="avatar" :style="{'background-image' : 'url('+state.user.avatar+')' }">
+              <div class="avatar" :style="{'background-image' : 'url('+globals.user.avatar+')' }">
                 
               </div>
-              <span v-text="state.user.first_name"></span>
+              <span v-text="globals.user.first_name"></span>
             </a>
           </li>
         </ul>

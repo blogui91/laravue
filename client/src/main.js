@@ -4,7 +4,7 @@ import VueResource from 'vue-resource';
 import _ from 'lodash';
 
 //Variables To share globally 
-import state from './stores';
+import globals from './globals';
 
 //Installing Vue dependecies
 Vue.use(VueResource);
@@ -13,7 +13,7 @@ Vue.use(VueResource);
 Vue.prototype.$moment = moment;
 Vue.prototype.$_ = _;
 
-//Install out components
+//Install our components
 import ComponentsProvider from './Components.provider.js';
 ComponentsProvider.install(Vue);
 
@@ -41,7 +41,7 @@ Vue.http.interceptors.push((request, next) => {
 var vm = new Vue({
 	el: 'html',
 	data: {
-		state
+		globals
 	},
 	methods: {},
 	events: {},

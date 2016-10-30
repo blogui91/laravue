@@ -17,7 +17,7 @@
 	<div class="users z-depth-1">
     <div class="header blue-grey"><h4>Users</h4></div>
     <ul class="collection">
-      <li class="collection-item avatar" v-for="user in state.users">
+      <li class="collection-item avatar" v-for="user in globals.users">
         <img :src="user.avatar" :alt="user.fullname" class="circle">
         <span class="title">{{user.fullname}}</span>
         <p>{{user.email}}<br>
@@ -29,26 +29,31 @@
 	</div>
   <div class="white md-padding">
     <input type="text" placeholder="First name" v-model="user.first_name">
-    <small class="red-text" v-if="user.errors.first_name" v-for="error in user.errors.first_name">
-      - {{error}} <br>
-    </small>
+    <span v-if="user.errors.first_name">
+      <small class="red-text" v-for="error in user.errors.first_name">
+        - {{error}} <br>
+      </small>
+    </span>
     <br>
     <input type="text" v-model="user.last_name" placeholder="last name">
-    <small class="red-text" v-if="user.errors.last_name" v-for="error in user.errors.last_name">
-      - {{error}} <br>
-    </small>
+    <span v-if="user.errors.last_name">
+      <small class="red-text" v-for="error in user.errors.last_name">
+        - {{error}} <br>
+      </small>
+    </span>
     <br>
     <input type="email" v-model="user.email" placeholder="email">
-    <small class="red-text" v-if="user.errors.email" v-for="error in user.errors.email">
-      - {{error}} <br>
-    </small>
-
+    <span v-if="user.errors.email">
+      <small class="red-text" v-for="error in user.errors.email">
+        - {{error}} <br>
+      </small>
+    </span>
 
     <button @click="user.validForCreation()" class="btn green">Validar</button>
   </div>
 </template>
 <script>
-  import state from 'src/stores';
+  import globals from 'src/globals';
   import UserModel from 'models/User.model';
 
   export default {
@@ -56,7 +61,7 @@
     data() {
       return{
         now : new Date(),
-        state,
+        globals,
         user : new UserModel()
       }
     },
@@ -69,7 +74,7 @@
         avatar : 'https://s3.amazonaws.com/uifaces/faces/twitter/csantana22/128.jpg'
       });
 
-      this.state.users.push(user);
+      this.globals.users.push(user);
     },
     filters : {
 
@@ -100,7 +105,7 @@
         var index = Math.floor(Math.random() * 3) + 0;
         var random_user = random_users[index];
         var new_user = new UserModel(random_user);
-        this.state.users.push(new_user);
+        this.globals.users.push(new_user);
       }
     },
     watch: {

@@ -18,7 +18,7 @@
 
                 <div class="row">
                     <div class="col s12">
-                        <material-calendar :model.sync="state.today"></material-calendar>  
+                        <material-calendar :model.sync="globals.today"></material-calendar>  
                         {{-- USE VUE COMPONENT IN WHOLE APP --}}
                         
                     </div>

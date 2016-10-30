@@ -27,7 +27,7 @@
 				- This setup does not work for SPA Vue Apps.
 			</li>
 			<li>
-				- <i>src/store.js</i>, saves our variables and we can use them in any laravel view or partial, no necessity of being inside a component. So on any update they will be changed instantly in all the sections we used them (state.our_variable_name). 
+				- <i>src/globals.js</i>, saves our variables and we can use them in any laravel view or partial, no necessity of being inside a component. So on any update they will be changed instantly in all the sections we used them (global.our_variable_name). 
 			</li>
 		</ul>
 	</p>
@@ -38,13 +38,13 @@
 	<div class="username" v-cloak>  <!-- USE V-CLOAK TO AVOID CURLY DIRTY BRACES ON RENDER -->
 		<p>Rendered outside any Vue component:
 			<i>
-            	@{{state.user.first_name}} <!-- share vue variables in whole app through stored in stores.js-->
+            	@{{globals.user.first_name}} <!-- share vue variables in whole app through stored in stores.js-->
 			</i>
 		</p>
 		<p>Variable Updated from Vue</p>
 		<p>
 			<label for="id-name" class="grey-text text-darken-2">First name</label>
-        	<input type="text" id="id-name" placeholder="Name" v-model="state.user.first_name">
+        	<input type="text" id="id-name" placeholder="Name" v-model="globals.user.first_name">
 		</p>
     </div> 
     
