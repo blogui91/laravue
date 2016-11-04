@@ -10,7 +10,7 @@ class {{Model}} extends Model {
 		//Fill your data 
 		this.fill(data);
 
-		this.rules_for_create = {};
+		this.rules_for_creation = {};
 		this.rules_for_update = {};
 	}
 
