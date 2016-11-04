@@ -168,6 +168,7 @@ return [
          */
 
         //
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
         /*
          * Application Service Providers...

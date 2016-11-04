@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-        <div class="position-ref container">
+        <div class="position-ref _container">
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
@@ -17,12 +17,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col s12 m6">
                         <material-calendar :model.sync="globals.today"></material-calendar>  
                         {{-- USE VUE COMPONENT IN WHOLE APP --}}
                         
                     </div>
-                    <div class="col s12">
+                    <div class="col s12 m6">
                         <users></users>
                     </div>
 
