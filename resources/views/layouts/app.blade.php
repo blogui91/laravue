@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" id="_token" content="{{ csrf_token() }}">
         <title>Laravue</title>
 
         <!-- Fonts -->
@@ -78,7 +78,7 @@
          @if(env('VUE_DEVELOP', false) == true)  {{-- IF OUR APP IS IN DEV THEN LARAVEL BROWSERSYNC WILL BE ENABLED, FEEL FREE TO REMOVE IT IF YOU DON'T WANT IT --}}
             <script id="__bs_script__">
                 //<![CDATA[
-                document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.15.0.js'><\/script>".replace("HOST", location.hostname));
+                document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));
                 //]]>
             </script>
             {{-- PLEASE, CONSIDE THIS FILE (browser-sync-client.2.15.0.js) MAY CHANGE DEPENDING OF BROWSERSYNC VERSION  --}}

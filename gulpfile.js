@@ -23,10 +23,10 @@ elixir(function(mix) {
 		// Combine all js files into one.
 		// Path is relative to resource/js folder.
 		root + 'bower_components/jquery/dist/jquery.min.js',
-		root + 'node_modules/materialize-css/bin/materialize.js',
+		root + 'bower_components/materialize/bin/materialize.js',
 	], 'public/js/vendor.js');
 
-	mix.copy('node_modules/materialize-css/fonts', 'public/fonts'); //Copy our fonts
+	mix.copy('bower_components/materialize/fonts', 'public/fonts'); //Copy our fonts
 	mix.babel('app.js');
 });
 
@@ -39,7 +39,7 @@ elixir(function(mix) {
 				'vue-app',
 				'../../../client/src/main.js', //By default elixir searches in js that's why we had to use '..' considering 
 				'./client/build/webpack.prod.conf.js'
-		);
+			);
 
 		//Save generated files in public folder
 		mix.version([
